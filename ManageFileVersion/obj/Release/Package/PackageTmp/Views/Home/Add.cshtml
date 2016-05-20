@@ -1,0 +1,135 @@
+﻿<div ng-controller="addBugController">
+    <h1 class="modal-title custom_align" id="Heading">測試回報BUG</h1>
+    <div class="form-group">
+        <label>類別</label>
+        <select class="form-control" id="sel1" ng-model="addBugFileName2" ng-options="m.FileName for m in productTypes" ng-change="readFileVersion(addBugFileName2)"></select>
+    </div>
+    <div class="form-group">
+        <label>版本</label>
+        <input class="form-control" ng-model="addBugFileVersion2" type="text" placeholder="1.0.0.0">
+    </div>
+    <div class="form-group">
+        <label>診所名稱</label>
+        <showclinicmenu name="addClinicIndex2" textname="clinicName"></showclinicmenu>
+    </div>
+    <div class="form-group">
+        <label>回報等級</label>
+        <select class="form-control" ng-model="addGrade" ng-options="o.value for o in bugGrades"></select>
+    </div>
+    <div class="form-group">
+        <label>回報訊息</label>
+        <textarea id="addBugContext" rows="10" cols="6" style="height:300px;width:560px"></textarea>
+    </div>
+    <div class="form-group">
+        <label>上傳檔案:<font color="red">最多5張</font></label>        
+        <input type="file" name="multipleFiles" multiple />
+    </div>
+
+    <button type="button" class="btn btn-success" ng-click="addBugSubmit()"><span class="glyphicon glyphicon-ok-sign"></span> 新增</button>
+
+</div>
+<input type="hidden" value=@ViewBag.username id="addUserID" />
+<input type="hidden" value=@ViewBag.announceIkey id="addAnnounceIkey" />
+
+<link href="~/Content/kendo/2014.3.1411/kendo.common.min.css" rel="stylesheet" />
+<link href="~/Content/kendo/2014.3.1411/kendo.default.min.css" rel="stylesheet" />
+<script src="~/Scripts/factory/pageFactory.js"></script>
+<script src="~/Scripts/directive/showClinicMenu.js"></script>
+<script src="../Scripts/kendo/2014.3.1411/kendo.all.min.js"></script>
+<script>
+    var app = pageFactory("servFileModel");
+    showClinicMenu(app); //宣告directive
+    app.controller("addBugController", function ($scope, $http, pageFactory) {
+      
+        $("#addBugContext").kendoEditor({
+            tools: [
+                "bold",
+                "italic",
+                "underline",
+                "strikethrough",
+                "justifyLeft",
+                "justifyCenter",
+                "justifyRight",
+                "justifyFull",
+                "createLink",
+                "unlink",
+                "createTable",
+                "addRowAbove",
+                "addRowBelow",
+                "addColumnLeft",
+                "addColumnRight",
+                "deleteRow",
+                "deleteColumn",
+                "viewHtml",
+                "formatting",
+                "cleanFormatting",
+                "fontSize",
+                "foreColor",
+            ],
+            encoded: true
+        });
+        
+        $scope.bugGrades = @Html.Raw(Json.Encode(@ViewBag.bugGrades));
+        $scope.addGrade = $scope.bugGrades[0];
+        $scope.userID = $("#addUserID").val();              //登入使用者
+
+        //showClinicMenu Component 元組件
+        $(document).ready(function () {
+            $("#addClinicIndex2").val('@ViewBag.clinicIndex');    //診所索引編號
+            $("#clinicName").val('@ViewBag.clinicName'); //為了呼叫組件的元件 填寫預設值
+        })
+
+        pageFactory.getData('../api/ApiTest/getProductTypes').then(function (value) {
+            $scope.productTypes = value;
+            var index = 0;
+            $.each(value, function (key, value) {
+                if (value.FileName == '@ViewBag.fileName') {
+                    index = key;
+                }
+            });
+            $scope.addBugFileName2 = value[index];
+            $scope.addBugFileVersion2 = '@ViewBag.fileVersion'
+        });
+
+        //取得版本
+        $scope.readFileVersion = function (selected) {
+            pageFactory.getData('../api/ApiTest/getProductVersion/' + $scope.addBugFileName2.FileName).then(function (value) {
+                $scope.addBugFileVersion2 = value;
+                $("#addAnnounceIkey").val(selected.ikey);
+            });
+        }
+
+        //新增
+        $scope.addBugSubmit = function () {
+            $scope.addBugAnnounceIkey2 = $("#addAnnounceIkey").val();   //servFile_notice 的ikey
+            if ($("#addBugContext").val() != "") {
+
+                var formData = new FormData();
+
+                //上傳多張圖片
+                $.each($("input[name='multipleFiles']"), function (i, obj) {
+                    $.each(obj.files, function (j, file) {
+                        formData.append('photo[' + j + ']', file);
+                    })
+                });
+
+                formData.append("addBugUid", $scope.userID);
+                var addClinicIndex = $("#addClinicIndex2").val(); //get showClinicMenu id
+                formData.append("addClinicIndex", addClinicIndex);
+                formData.append("addBugAnnounceIkey", $scope.addBugAnnounceIkey2);
+                formData.append("addBugfileVersion", $scope.addBugFileVersion2);
+                formData.append("addBugContext", $("#addBugContext").val());
+                formData.append("addBugType", 1); //回報正式版的bug
+                formData.append("addBugGrade", $scope.addGrade.key); //回報正式版的bug
+
+                pageFactory.postData('../Test/AddReleaseBug', formData).then(function (value) {
+                    alert("儲存成功");
+                });
+
+            } else {
+                alert("請輸入回報bug的內容!");
+            }
+        }
+    });
+</script>
+  

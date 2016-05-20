@@ -1,0 +1,340 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@section news{
+<h1 class="page-header">最新公告</h1>
+<table class="CSSTableGenerator" ng-controller="newsController"> 
+        <tr>
+            <td>檔名</td>
+            <td>路徑</td>
+            <td>類別</td>            
+            <td>版本</td>
+            <td>日期</td>
+        </tr>
+         <tr ng-repeat="newVersion in lastNews">
+                <td>{{newVersion.FileName}}</td>             
+                 <td>{{newVersion.FilePath}}</td>   
+                <td>{{newVersion.FileType}}</td>
+                <td>{{newVersion.FileVersion}}</td>
+                <td>{{newVersion.FileDate| date:'yyyy-MM-dd' }}</td>
+         </tr>
+</table>
+}
+<br />
+<br />
+
+<h2 class="sub-header">所有版本公告</h2>
+<div class="table-responsive" ng-controller="servFileController">
+
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-addon"><i class="fa fa-search">查詢</i></div>
+            <input type="text" class="form-control" placeholder="Search" ng-model="searchReleaseText">
+        </div>
+    </div>
+    <br />
+    <br />
+    <table class="table table-striped">
+        <thead>
+            <tr>              
+                <th>
+                    <a href="#" ng-click="sortType = 'FileName'; sortReverse = !sortReverse">檔名</a>
+                    <img src="~/Images/down.png" ng-show="sortType == 'FileName' && !sortReverse" />
+                    <img src="~/Images/up.png" ng-show="sortType == 'FileName' && sortReverse" />
+                </th>
+                <th>
+                    <a href="#" ng-click="sortType = 'FilePath'; sortReverse = !sortReverse">路徑</a>
+                    <img src="~/Images/down.png" ng-show="sortType == 'FilePath' && !sortReverse" />
+                    <img src="~/Images/up.png" ng-show="sortType == 'FilePath' && sortReverse" />
+                </th>
+                <th>
+                    <a href="#" ng-click="sortType = 'FileType'; sortReverse = !sortReverse">類別</a>
+                    <img src="~/Images/down.png" ng-show="sortType == 'FileType' && !sortReverse" />
+                    <img src="~/Images/up.png" ng-show="sortType == 'FileType' && sortReverse" />
+                </th>
+                <th>
+                    <a href="#" ng-click="sortType = 'FileVersion'; sortReverse = !sortReverse">版本</a>
+                    <img src="~/Images/down.png" ng-show="sortType == 'FileVersion' && !sortReverse" />
+                    <img src="~/Images/up.png" ng-show="sortType == 'FileVersion' && sortReverse" />
+                </th>
+                <th>
+                    <a href="#" ng-click="sortType = 'FileSize'; sortReverse = !sortReverse">大小</a>
+                    <img src="~/Images/down.png" ng-show="sortType == 'FileSize' && !sortReverse" />
+                    <img src="~/Images/up.png" ng-show="sortType == 'FileSize' && sortReverse" />
+                </th>
+                @*<th>
+                    BUG
+                </th>
+                <th>
+                    LIST
+                </th>*@
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="vfile in servfiles | orderBy:sortType:sortReverse | filter:searchReleaseText">
+                <td>{{::vfile.FileName}}</td>
+                <td>{{::vfile.FilePath}}</td>
+                <td>{{::vfile.FileType}}</td>
+                <td>{{::vfile.FileVersion}}</td>
+                <td>{{::vfile.FileSize}}</td>
+                @*<td>                    
+                    <button type="button" class="btn btn-warning btn-lg disabled" data-toggle="modal" data-target="#addBug" ng-click="showBugForm(vfile.ikey)"><span class="glyphicon glyphicon-plus-sign"></span></button>
+                </td>
+                <td>                    
+                   <button type="button" class="btn btn-info btn-lg disabled" data-toggle="modal" data-target="#listBug" ng-click="showListbugs(vfile.ikey)"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span></button>
+                </td>*@
+            </tr>
+        </tbody>
+    </table>  
+
+    <div class="modal fade" id="addBug" tabindex="-1" role="dialog" aria-labelledby="addBug" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                        <h4 class="modal-title custom_align" id="Heading">測試回報BUG</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>檔名</label>
+                            <input type="hidden" ng-model="addBugAnnounceIkey" />
+                            <input class="form-control" ng-model="addBugFileName" type="text" placeholder="請輸入檔名" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>版本</label>
+                            <input class="form-control" ng-model="addBugFileVersion" type="text" placeholder="1.0.0.0" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>診所名稱</label>
+                            <input  ng-model="addClinicIndex" type="hidden" >
+                            <input class="form-control" ng-model="clinicName" type="text" ng-change="showClinicMenu(clinicName)">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item"
+                                   ng-click="setClinicID(clinic.clinicIndex,clinic.clinicName)" ng-repeat="clinic in listClinics">
+                                    {{clinic.clinicName}}
+                                </a>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>回報訊息</label>
+                            <textarea rows="10" class="form-control" ng-model="addBugContext" placeholder="請輸入內容"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>上傳檔案</label>
+                            <input type="file" id="addBugDocumentFile" />
+                        </div>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-success" ng-click="addBugSubmit()"><span class="glyphicon glyphicon-ok-sign"></span> Yes</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Modal -->
+    <div id="listBug" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">bug回報列表</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-search">查詢</i></div>
+                            <input type="text" class="form-control" placeholder="Search" ng-model="searchText">
+                            <input type="hidden" ng-model="hiddenAnnounceIkey" />
+                        </div>
+                    </div>
+                    <table class="table table-striped" width="600">
+                        <thead>
+                            <tr class="danger">
+                                <th>提報者</th>                             
+                                <th>診所名稱</th>
+                                <th>提報內容</th>
+                                @*<th>下戴檔案</th>*@                             
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="bug in listBugs | filter:searchText">
+                                <td>{{bug.userName}}
+                                    <div ng-show="(bug.uid == userID)">
+                                        <button class="btn btn-info btn-lg" ng-click="save(bug.ikey)" ng-show="(bug.ikey === editIkey)"><span class="glyphicon glyphicon-floppy-disk"></span></button>
+                                        <button class="btn btn-info btn-lg" ng-click="cancel(bug.ikey)" ng-show="(bug.ikey === editIkey)"><span class="glyphicon glyphicon-remove-circle"></span></button>
+                                        <button class="btn btn-info btn-lg" ng-click="edit(bug.ikey)" ng-show="!(bug.ikey === editIkey)"><span class="glyphicon glyphicon-pencil"></span></button>
+                                        <button class="btn btn-danger btn-lg" ng-click="delete(bug.ikey)" ><span class="glyphicon glyphicon-trash"></span></button>
+                                    </div>
+                                </td>                              
+                                <td>
+                                    <label>{{bug.clinicName}}</label>
+                                </td>
+                                <td>
+                                    <label ng-if="!(bug.ikey === editIkey)">{{bug.bugContext}}</label>
+                                    <input type="hidden" id="hiddenBugContext_{{bug.ikey}}" value="{{bug.bugContext}}" />
+                                    <textarea  ng-if="(bug.ikey === editIkey)" ng-model="$parent.$parent.editBugContext"></textarea><br /><br />
+                                    <div id="editImage" ng-if="!(bug.ikey === editIkey)"><a href="~/bugFile/{{bug.bugDocumentFile}}" target="_blank">{{bug.bugDocumentFile}}</a></div>
+                                    <div id="editImage" ng-if="(bug.ikey === editIkey)"><input type="file" id="editBugDocumentFile" /></div>
+                                </td>
+                                @*<td>
+                                    
+                                </td>*@
+                                @*<td>
+                                    <div ng-show="(bug.uid == userID)">
+                                        <button ng-click="save(bug.ikey)" ng-show="(bug.ikey === editIkey)"><span class="glyphicon glyphicon-floppy-disk"></span></button>
+                                        <button ng-click="cancel(bug.ikey)" ng-show="(bug.ikey === editIkey)"><span class="glyphicon glyphicon-remove-circle"></span></button>
+                                        <button ng-click="edit(bug.ikey)" ng-show="!(bug.ikey === editIkey)"><span class="glyphicon glyphicon-pencil"></span></button>
+                                        <button ng-click="delete(bug.ikey)"><span class="glyphicon glyphicon-trash"></span></button>
+                                    </div>
+                                </td>*@
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <input type="hidden" value=@ViewBag.username id="userID" />
+    <input type="hidden" value=@ViewBag.clinicIndex id="clinicIndex" />
+</div>
+
+<script>
+    var app = angular.module("servFileModel", []);
+    // factory
+    app.factory('pageFactory', function ($http) {
+        //var userID = @ViewBag.username;
+        return {
+            getData: function (url) {
+                return ($http.get(url).then(function (res) {
+                    return res.data;
+                }));
+            },
+            postData: function (url, formData) {
+                return ($http.post(url, formData, {
+                    transformRequest: angular.identity,
+                    headers: { 'Content-Type': undefined }
+                }).then(function (res) {
+                    return res.data;
+                }));
+            },
+        }
+    });
+
+    app.controller("newsController", function ($scope,$http) {
+        $scope.lastNews = [];
+        $http.get("../api/ServfileAPI?showLastWeekDate=true").then(function (result) { //呼叫Web API
+            $scope.lastNews = result.data;
+        });
+    })
+
+    app.controller("servFileController", function ($scope, $http, pageFactory) {
+        $scope.servfiles = [];
+        $http.get("../api/ServfileAPI").then(function (result) { //呼叫Web API
+            $scope.servfiles = result.data;
+        });
+
+        $scope.showBugForm = function (ikey) {
+            $scope.addClinicIndex = $("#clinicIndex").val();
+            pageFactory.getData('../api/ApiTest/readBugRelease/' + ikey).then(function (value) {
+                $scope.addBugAnnounceIkey = value.ikey;
+                $scope.addBugFileVersion = value.fileVersion;
+                $scope.addBugFileName = value.fileName;
+                $scope.addBugContext = "";
+                $('#addBugDocumentFile').replaceWith($("#addBugDocumentFile").clone());
+            });
+        }
+
+        $scope.userID = $("#userID").val();        
+        $scope.addBugSubmit = function () {
+            if ($scope.addBugContext.trim() != "") {
+                var formData = new FormData();
+                formData.append("addBugUid", $scope.userID);
+                formData.append("addClinicIndex", $scope.addClinicIndex);
+                formData.append("addBugAnnounceIkey", $scope.addBugAnnounceIkey);
+                formData.append("addBugContext", $scope.addBugContext);
+                formData.append("addBugDocumentFile", $('#addBugDocumentFile')[0].files[0]);
+                formData.append("addBugType", 1); //回報正式版的bug           
+                pageFactory.postData('../Test/AddReleaseBug', formData).then(function (value) {
+                    $('#addBug').modal('hide');
+                    alert("儲存成功");
+                });
+            } else {
+                alert("請輸入回報bug的內容!");
+            }         
+        }
+
+        $scope.showListbugs = function (announceIkey) {
+            $scope.hiddenAnnounceIkey = announceIkey;
+            $scope.listBugs = null;
+            pageFactory.getData('../api/ApiTest/listBugNote/' + announceIkey+"/bugType/1").then(function (value) {
+                $scope.listBugs = value;
+            });
+        }
+
+        $scope.editIkey = 0;
+        $scope.edit = function (editIkey) {
+            $scope.editIkey = editIkey;
+            $scope.editBugContext = $("#hiddenBugContext_" + editIkey).val();//jQuery 語法
+        }
+
+        $scope.cancel = function () {
+            $scope.editIkey = 0;
+        }
+
+        $scope.save = function () {
+            if ($scope.editBugContext.trim() != "") {
+                var formData = new FormData();
+                formData.append("editIkey", $scope.editIkey);
+                formData.append("editBugContext", $scope.editBugContext);
+                formData.append("editBugDocumentFile", $('#editBugDocumentFile')[0].files[0]);
+                formData.append("editBugType", 1); //測試類別0:測試版 1:正式版
+
+                pageFactory.postData('../Test/EditBug', formData).then(function (value) {
+                    //顯出列表, $scope.hiddenAnnounceIkey 來自hidden
+                    pageFactory.getData('../api/ApiTest/listBugNote/' + $scope.hiddenAnnounceIkey + "/bugType/1").then(function (value) {
+                        $scope.listBugs = value;
+                    });
+
+                    alert("儲存成功");
+                    $scope.editIkey = 0;
+                })
+            } else {
+                alert("請輸入回報內容!");
+            }
+        }
+
+        $scope.delete = function myfunction(deleteIkey) {
+            var confirmResult = window.confirm("確定要刪除嗎?");
+            if (confirmResult == true) {
+                var formData = new FormData();
+                formData.append("deleteIkey", deleteIkey);
+                pageFactory.postData('../Test/DeleteBug', formData).then(function (value) {
+                    //顯出列表, $scope.hiddenAnnounceIkey 來自hidden
+                    pageFactory.getData('../api/ApiTest/listBugNote/' + $scope.hiddenAnnounceIkey + "/bugType/1").then(function (value) {
+                        $scope.listBugs = value;
+                    });
+                    $scope.editIkey = 0;
+                })
+            }
+        }
+
+        $scope.showClinicMenu = function (clinicName) {
+            pageFactory.getData('../api/ApiTest/listClinics/' + clinicName).then(function (value) {
+                $scope.addClinicIndex = "";
+                $scope.listClinics = value;
+            });
+        }
+
+        $scope.setClinicID = function (clinicIndex,clinicName) {
+            $scope.addClinicIndex = clinicIndex;
+            $scope.listClinics = null; //清空資料
+            $scope.clinicName = clinicName;
+        }
+    });
+</script>

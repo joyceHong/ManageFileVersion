@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Print";
+    Layout = "";
+}
+@model IEnumerable<ManageFileVersion.Models.viewBug>
+<h2>Print</h2>
+    @foreach (var item in Model)
+    {
+        <table border="1" width="800px">
+            <tr>
+                <td>提報人: @item.userName</td>
+            </tr>
+            <tr>
+                <td>產品 @item.fileName </td>
+            </tr>
+            <tr>
+                <td>診所名稱:@item.clinicName</td>
+            </tr>
+            <tr>
+                <td>問題描述 : @Html.Raw(@item.bugContext)</td>
+            </tr>
+            <tr>
+                <td>RD回覆: @Html.Raw(@item.remark)</td>
+            </tr>
+            <tr>
+                <td>
+
+                                        @{
+        var imageFiles = item.bugDocumentFile.Split(',');
+        foreach (var fileName in imageFiles)
+        {
+                <img src="~/bugFile/@item.announcementIkey/@ViewBag.currentYear/@fileName" width="300px" height="300px"><br />
+        }
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+        <p></p>
+    }

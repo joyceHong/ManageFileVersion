@@ -1,0 +1,26 @@
+﻿@{
+    Layout = null;
+}
+<html>
+<head>
+    <title>登入畫面</title>      
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <link href="~/Content/login.css" rel="stylesheet" />
+</head>
+<body>
+    <form method="post">
+        <div class="jumbotron">
+            <div class="container">
+                <span class="glyphicon glyphicon-list-alt"></span>
+                <h2>測試系統</h2>
+                <div class="box">
+                    <input type="text" placeholder="username" name="username">
+                    <input type="password" placeholder="password" name="password">
+                    <input type="submit" value="送出" class="btn btn-default full-width" />
+                    @*<button class="btn btn-default full-width"><span class="glyphicon glyphicon-ok"></span></button>*@
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

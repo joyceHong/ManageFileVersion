@@ -1,0 +1,103 @@
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\ManageFileVersion.Tests.dll.config
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\ManageFileVersion.Tests.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\ManageFileVersion.Tests.pdb
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\ManageFileVersion.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\Microsoft.Owin.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\Owin.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.Http.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\EntityFramework.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.Http.WebHost.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\ManageFileVersion.pdb
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.Optimization.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\Microsoft.Owin.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.Http.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\EntityFramework.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.Http.WebHost.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\zh-Hant\System.Web.Helpers.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\zh-Hant\System.Web.Mvc.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\zh-Hant\System.Web.Razor.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\zh-Hant\System.Web.WebPages.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\zh-Hant\System.Web.WebPages.Deployment.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\zh-Hant\System.Web.WebPages.Razor.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\zh-Hant\System.Web.Optimization.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\zh-Hant\Microsoft.Owin.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\zh-Hant\System.Web.Http.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\zh-Hant\EntityFramework.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\zh-Hant\System.Web.Http.WebHost.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\zh-Hant\System.Net.Http.Formatting.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\obj\Debug\ManageFileVersion.Tests.csprojResolveAssemblyReference.cache
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\obj\Debug\ManageFileVersion.Tests.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion.Tests\obj\Debug\ManageFileVersion.Tests.pdb
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\ManageFileVersion.Tests.dll.config
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\ManageFileVersion.Tests.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\ManageFileVersion.Tests.pdb
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\ManageFileVersion.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\Newtonsoft.Json.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.Helpers.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.Mvc.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.Razor.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.WebPages.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\EntityFramework.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.Http.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.Optimization.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\Owin.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\Microsoft.Owin.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.Http.WebHost.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Net.Http.Formatting.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\ManageFileVersion.pdb
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\Newtonsoft.Json.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.Helpers.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.Mvc.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.Razor.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.WebPages.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\EntityFramework.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.Http.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.Optimization.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\Microsoft.Owin.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Web.Http.WebHost.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\System.Net.Http.Formatting.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\zh-Hant\System.Web.Helpers.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\zh-Hant\System.Web.Mvc.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\zh-Hant\System.Web.Razor.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\zh-Hant\System.Web.WebPages.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\zh-Hant\System.Web.WebPages.Deployment.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\zh-Hant\System.Web.WebPages.Razor.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\zh-Hant\EntityFramework.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\zh-Hant\System.Web.Http.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\zh-Hant\System.Web.Optimization.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\zh-Hant\Microsoft.Owin.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\zh-Hant\System.Web.Http.WebHost.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\zh-Hant\System.Net.Http.Formatting.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\obj\Debug\ManageFileVersion.Tests.csprojResolveAssemblyReference.cache
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\obj\Debug\ManageFileVersion.Tests.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\obj\Debug\ManageFileVersion.Tests.pdb
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\writeLog.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\writeLog.pdb
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\EntityFramework.SqlServer.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\EntityFramework.SqlServer.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\zh-Hant\EntityFramework.SqlServer.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\Microsoft.AspNet.SignalR.Core.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion.Tests\bin\Debug\Microsoft.AspNet.SignalR.Core.xml

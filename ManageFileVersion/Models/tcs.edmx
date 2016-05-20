@@ -1,0 +1,581 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TCSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="alluser">
+          <Key>
+            <PropertyRef Name="skey" />
+          </Key>
+          <Property Name="seq" Type="smallint" Nullable="false" />
+          <Property Name="name" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="regin" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="regout" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="regs" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="addr" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="uid" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="uoid" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="upwd" Type="varchar" MaxLength="28" />
+          <Property Name="usrgrp" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="userright" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="sarea" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="specialo" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="specialx" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="show" Type="bit" Nullable="false" />
+          <Property Name="staff" Type="bit" Nullable="false" />
+          <Property Name="ordertype" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="bdy" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="bdmn" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="gmail" Type="varchar" MaxLength="30" />
+          <Property Name="department" Type="varchar" MaxLength="7" />
+          <Property Name="priority" Type="int" />
+          <Property Name="tel" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="mobile" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="skey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="asuser">
+          <Key>
+            <PropertyRef Name="skey" />
+          </Key>
+          <Property Name="索引編號" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="客戶編號" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="chkno" Type="bit" Nullable="false" />
+          <Property Name="客戶名稱" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="負責業務" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="區域業務" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="客戶電話" Type="varchar" MaxLength="16" Nullable="false" />
+          <Property Name="客戶電話2" Type="varchar" MaxLength="16" Nullable="false" />
+          <Property Name="分機1" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="分機2" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="附掛1" Type="varchar" MaxLength="16" Nullable="false" />
+          <Property Name="附掛2" Type="varchar" MaxLength="16" Nullable="false" />
+          <Property Name="負責醫師" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="客戶地址" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="軟體購買日" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="購買金額" Type="numeric" Precision="8" Scale="0" Nullable="false" />
+          <Property Name="工作站數" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="付費站數" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="硬體購買日" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="維護方式" Type="numeric" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="維護起始日" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="維護到期日" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="維護入帳日" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="計次版本" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="目前版本" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="更版日期" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="目前版次" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="合約金額" Type="numeric" Precision="6" Scale="0" Nullable="false" />
+          <Property Name="合約備註" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="合約種類" Type="numeric" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="xml安裝" Type="tinyint" Nullable="false" />
+          <Property Name="xml已安裝" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="xml安裝台" Type="tinyint" Nullable="false" />
+          <Property Name="HCA" Type="tinyint" Nullable="false" />
+          <Property Name="HCA2" Type="tinyint" Nullable="false" />
+          <Property Name="寄合約" Type="bit" Nullable="false" />
+          <Property Name="縣市" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="郵遞區號" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="畢業學校" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="聯絡人" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="醫事代號" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="等級" Type="numeric" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="備註" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="更版密碼" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="註冊密碼" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="舊版密碼" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="看診時段" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="申報方式" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="快速碼" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="介紹" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="轉檔" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="EMAIL" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FOX版本" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="影像碼" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="行動電話" Type="varchar" MaxLength="16" Nullable="false" />
+          <Property Name="安裝人員" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="成交人員" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="傳真" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="統編" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="統編抬頭" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="讀卡機" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="讀卡機數量" Type="int" Nullable="false" />
+          <Property Name="IC卡教學" Type="bit" Nullable="false" />
+          <Property Name="VPN_IP" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="硬體到期日" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="光碟更版" Type="bit" Nullable="false" />
+          <Property Name="自安讀卡機" Type="bit" Nullable="false" />
+          <Property Name="登錄日期" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="防毒到期日" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="申報時段" Type="int" Nullable="false" />
+          <Property Name="遠端維護" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="遠端維護2" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="PORT" Type="int" Nullable="false" />
+          <Property Name="CPORT1" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="CPORT2" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="CPORT3" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="CPORT4" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="VPN備註" Type="varchar" MaxLength="250" Nullable="false" />
+          <Property Name="帳款聯絡人" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="收款方式" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="公會頭銜" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="合約等級" Type="numeric" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="客戶等級" Type="numeric" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="客戶區域" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="新影像碼" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="EMR碼" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="客戶類別" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="負責單位" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="使用狀況" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="體系名稱" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="巷" Type="int" Nullable="false" />
+          <Property Name="弄" Type="int" Nullable="false" />
+          <Property Name="鄰" Type="int" Nullable="false" />
+          <Property Name="之號" Type="int" Nullable="false" />
+          <Property Name="號" Type="int" Nullable="false" />
+          <Property Name="之" Type="int" Nullable="false" />
+          <Property Name="樓" Type="int" Nullable="false" />
+          <Property Name="路" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="里" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="不訪查" Type="bit" Nullable="false" />
+          <Property Name="超商代號" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="AUPD" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="QUPD" Type="varchar" MaxLength="14" Nullable="false" />
+          <Property Name="sarea" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="checked" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="ASEQ" Type="int" Nullable="false" />
+          <Property Name="IKEY" Type="int" Nullable="false" />
+          <Property Name="台中索編" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="台中客編" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="台中名稱" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="台中備註" Type="text" Nullable="false" />
+          <Property Name="關連索編" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="別名" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="高雄索編" Type="varchar" MaxLength="5" />
+          <Property Name="skey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="關連索編2" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="關連索編3" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="關連索編4" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="關連索編5" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="別名2" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="別名3" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="別名4" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="別名5" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="所屬工程" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="所屬客服" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="版本s" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="憑證預約日" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="憑證安裝日" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="線上申請3" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="gip1" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="gip2" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="線上申請4" Type="varchar" MaxLength="50" />
+          <Property Name="線上申請5" Type="varchar" MaxLength="50" />
+          <Property Name="線上申請6" Type="varchar" MaxLength="50" />
+          <Property Name="線上申請7" Type="varchar" MaxLength="50" />
+          <Property Name="線上申請8" Type="varchar" MaxLength="50" />
+          <Property Name="線上申請9" Type="varchar" MaxLength="50" />
+          <Property Name="授權" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <Function Name="IdentifyLogin3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Account" Type="varchar" Mode="In" />
+          <Parameter Name="Password" Type="varchar" Mode="In" />
+          <Parameter Name="lIp" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="TCSModelStoreContainer">
+          <EntitySet Name="alluser" EntityType="Self.alluser" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="asuser" EntityType="Self.asuser" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TCSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="TCSEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="IdentifyLogin3" ReturnType="Collection(Int32)">
+            <Parameter Name="Account" Mode="In" Type="String" />
+            <Parameter Name="Password" Mode="In" Type="String" />
+            <Parameter Name="lIp" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="alluser" EntityType="TCSModel.alluser" />
+          <EntitySet Name="asuser" EntityType="TCSModel.asuser" />
+        </EntityContainer>
+        <EntityType Name="alluser">
+          <Key>
+            <PropertyRef Name="skey" />
+          </Key>
+          <Property Name="seq" Type="Int16" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="regin" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="regout" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="regs" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="addr" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="uid" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="uoid" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="upwd" Type="String" MaxLength="28" FixedLength="false" Unicode="false" />
+          <Property Name="usrgrp" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="userright" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="sarea" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="specialo" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="specialx" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="show" Type="Boolean" Nullable="false" />
+          <Property Name="staff" Type="Boolean" Nullable="false" />
+          <Property Name="ordertype" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="bdy" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="bdmn" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="gmail" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="skey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="department" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="priority" Type="Int32" />
+          <Property Name="tel" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="mobile" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="asuser">
+          <Key>
+            <PropertyRef Name="skey" />
+          </Key>
+          <Property Name="索引編號" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="客戶編號" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="chkno" Type="Boolean" Nullable="false" />
+          <Property Name="客戶名稱" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="負責業務" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="區域業務" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="客戶電話" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="客戶電話2" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="分機1" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="分機2" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="附掛1" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="附掛2" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="負責醫師" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="客戶地址" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="軟體購買日" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="購買金額" Type="Decimal" Nullable="false" Precision="8" Scale="0" />
+          <Property Name="工作站數" Type="Decimal" Nullable="false" Precision="3" Scale="0" />
+          <Property Name="付費站數" Type="Decimal" Nullable="false" Precision="3" Scale="0" />
+          <Property Name="硬體購買日" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="維護方式" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
+          <Property Name="維護起始日" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="維護到期日" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="維護入帳日" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="計次版本" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="目前版本" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="更版日期" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="目前版次" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="合約金額" Type="Decimal" Nullable="false" Precision="6" Scale="0" />
+          <Property Name="合約備註" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="合約種類" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
+          <Property Name="xml安裝" Type="Byte" Nullable="false" />
+          <Property Name="xml已安裝" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="xml安裝台" Type="Byte" Nullable="false" />
+          <Property Name="HCA" Type="Byte" Nullable="false" />
+          <Property Name="HCA2" Type="Byte" Nullable="false" />
+          <Property Name="寄合約" Type="Boolean" Nullable="false" />
+          <Property Name="縣市" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="false" />
+          <Property Name="郵遞區號" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="畢業學校" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="聯絡人" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="醫事代號" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="等級" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
+          <Property Name="備註" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="更版密碼" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="註冊密碼" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="舊版密碼" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="看診時段" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="申報方式" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="快速碼" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="介紹" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="轉檔" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="EMAIL" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FOX版本" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="影像碼" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="行動電話" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="安裝人員" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="成交人員" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="傳真" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="統編" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="統編抬頭" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="讀卡機" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="讀卡機數量" Type="Int32" Nullable="false" />
+          <Property Name="IC卡教學" Type="Boolean" Nullable="false" />
+          <Property Name="VPN_IP" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="硬體到期日" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="光碟更版" Type="Boolean" Nullable="false" />
+          <Property Name="自安讀卡機" Type="Boolean" Nullable="false" />
+          <Property Name="登錄日期" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="防毒到期日" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="申報時段" Type="Int32" Nullable="false" />
+          <Property Name="遠端維護" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="遠端維護2" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="PORT" Type="Int32" Nullable="false" />
+          <Property Name="CPORT1" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="CPORT2" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="CPORT3" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="CPORT4" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="VPN備註" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="帳款聯絡人" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="收款方式" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="公會頭銜" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="合約等級" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
+          <Property Name="客戶等級" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
+          <Property Name="客戶區域" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="新影像碼" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="EMR碼" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="客戶類別" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="負責單位" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="使用狀況" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="體系名稱" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="巷" Type="Int32" Nullable="false" />
+          <Property Name="弄" Type="Int32" Nullable="false" />
+          <Property Name="鄰" Type="Int32" Nullable="false" />
+          <Property Name="之號" Type="Int32" Nullable="false" />
+          <Property Name="號" Type="Int32" Nullable="false" />
+          <Property Name="之" Type="Int32" Nullable="false" />
+          <Property Name="樓" Type="Int32" Nullable="false" />
+          <Property Name="路" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="里" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="不訪查" Type="Boolean" Nullable="false" />
+          <Property Name="超商代號" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="AUPD" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="false" />
+          <Property Name="QUPD" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="false" />
+          <Property Name="sarea" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="checked" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ASEQ" Type="Int32" Nullable="false" />
+          <Property Name="IKEY" Type="Int32" Nullable="false" />
+          <Property Name="台中索編" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="台中客編" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="台中名稱" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="台中備註" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="關連索編" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="別名" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="高雄索編" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="skey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="關連索編2" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="關連索編3" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="關連索編4" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="關連索編5" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="別名2" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="別名3" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="別名4" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="別名5" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="所屬工程" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="所屬客服" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="版本s" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="憑證預約日" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="憑證安裝日" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="線上申請3" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gip1" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="gip2" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="線上申請4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="線上申請5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="線上申請6" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="線上申請7" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="線上申請8" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="線上申請9" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="授權" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TCSModelStoreContainer" CdmEntityContainer="TCSEntities" >
+          <FunctionImportMapping FunctionImportName="IdentifyLogin3" FunctionName="TCSModel.Store.IdentifyLogin3" />
+          <EntitySetMapping Name="alluser">
+            <EntityTypeMapping TypeName="TCSModel.alluser">
+              <MappingFragment StoreEntitySet="alluser">
+                <ScalarProperty Name="mobile" ColumnName="mobile" />
+                <ScalarProperty Name="tel" ColumnName="tel" />
+                <ScalarProperty Name="priority" ColumnName="priority" />
+                <ScalarProperty Name="department" ColumnName="department" />
+                <ScalarProperty Name="skey" ColumnName="skey" />
+                <ScalarProperty Name="gmail" ColumnName="gmail" />
+                <ScalarProperty Name="bdmn" ColumnName="bdmn" />
+                <ScalarProperty Name="bdy" ColumnName="bdy" />
+                <ScalarProperty Name="ordertype" ColumnName="ordertype" />
+                <ScalarProperty Name="staff" ColumnName="staff" />
+                <ScalarProperty Name="show" ColumnName="show" />
+                <ScalarProperty Name="specialx" ColumnName="specialx" />
+                <ScalarProperty Name="specialo" ColumnName="specialo" />
+                <ScalarProperty Name="sarea" ColumnName="sarea" />
+                <ScalarProperty Name="userright" ColumnName="userright" />
+                <ScalarProperty Name="usrgrp" ColumnName="usrgrp" />
+                <ScalarProperty Name="upwd" ColumnName="upwd" />
+                <ScalarProperty Name="uoid" ColumnName="uoid" />
+                <ScalarProperty Name="uid" ColumnName="uid" />
+                <ScalarProperty Name="addr" ColumnName="addr" />
+                <ScalarProperty Name="regs" ColumnName="regs" />
+                <ScalarProperty Name="regout" ColumnName="regout" />
+                <ScalarProperty Name="regin" ColumnName="regin" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="seq" ColumnName="seq" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="asuser">
+            <EntityTypeMapping TypeName="TCSModel.asuser">
+              <MappingFragment StoreEntitySet="asuser">
+                <ScalarProperty Name="授權" ColumnName="授權" />
+                <ScalarProperty Name="線上申請9" ColumnName="線上申請9" />
+                <ScalarProperty Name="線上申請8" ColumnName="線上申請8" />
+                <ScalarProperty Name="線上申請7" ColumnName="線上申請7" />
+                <ScalarProperty Name="線上申請6" ColumnName="線上申請6" />
+                <ScalarProperty Name="線上申請5" ColumnName="線上申請5" />
+                <ScalarProperty Name="線上申請4" ColumnName="線上申請4" />
+                <ScalarProperty Name="gip2" ColumnName="gip2" />
+                <ScalarProperty Name="gip1" ColumnName="gip1" />
+                <ScalarProperty Name="線上申請3" ColumnName="線上申請3" />
+                <ScalarProperty Name="憑證安裝日" ColumnName="憑證安裝日" />
+                <ScalarProperty Name="憑證預約日" ColumnName="憑證預約日" />
+                <ScalarProperty Name="版本s" ColumnName="版本s" />
+                <ScalarProperty Name="所屬客服" ColumnName="所屬客服" />
+                <ScalarProperty Name="所屬工程" ColumnName="所屬工程" />
+                <ScalarProperty Name="別名5" ColumnName="別名5" />
+                <ScalarProperty Name="別名4" ColumnName="別名4" />
+                <ScalarProperty Name="別名3" ColumnName="別名3" />
+                <ScalarProperty Name="別名2" ColumnName="別名2" />
+                <ScalarProperty Name="關連索編5" ColumnName="關連索編5" />
+                <ScalarProperty Name="關連索編4" ColumnName="關連索編4" />
+                <ScalarProperty Name="關連索編3" ColumnName="關連索編3" />
+                <ScalarProperty Name="關連索編2" ColumnName="關連索編2" />
+                <ScalarProperty Name="skey" ColumnName="skey" />
+                <ScalarProperty Name="高雄索編" ColumnName="高雄索編" />
+                <ScalarProperty Name="別名" ColumnName="別名" />
+                <ScalarProperty Name="關連索編" ColumnName="關連索編" />
+                <ScalarProperty Name="台中備註" ColumnName="台中備註" />
+                <ScalarProperty Name="台中名稱" ColumnName="台中名稱" />
+                <ScalarProperty Name="台中客編" ColumnName="台中客編" />
+                <ScalarProperty Name="台中索編" ColumnName="台中索編" />
+                <ScalarProperty Name="IKEY" ColumnName="IKEY" />
+                <ScalarProperty Name="ASEQ" ColumnName="ASEQ" />
+                <ScalarProperty Name="checked" ColumnName="checked" />
+                <ScalarProperty Name="sarea" ColumnName="sarea" />
+                <ScalarProperty Name="QUPD" ColumnName="QUPD" />
+                <ScalarProperty Name="AUPD" ColumnName="AUPD" />
+                <ScalarProperty Name="超商代號" ColumnName="超商代號" />
+                <ScalarProperty Name="不訪查" ColumnName="不訪查" />
+                <ScalarProperty Name="里" ColumnName="里" />
+                <ScalarProperty Name="路" ColumnName="路" />
+                <ScalarProperty Name="樓" ColumnName="樓" />
+                <ScalarProperty Name="之" ColumnName="之" />
+                <ScalarProperty Name="號" ColumnName="號" />
+                <ScalarProperty Name="之號" ColumnName="之號" />
+                <ScalarProperty Name="鄰" ColumnName="鄰" />
+                <ScalarProperty Name="弄" ColumnName="弄" />
+                <ScalarProperty Name="巷" ColumnName="巷" />
+                <ScalarProperty Name="體系名稱" ColumnName="體系名稱" />
+                <ScalarProperty Name="使用狀況" ColumnName="使用狀況" />
+                <ScalarProperty Name="負責單位" ColumnName="負責單位" />
+                <ScalarProperty Name="客戶類別" ColumnName="客戶類別" />
+                <ScalarProperty Name="EMR碼" ColumnName="EMR碼" />
+                <ScalarProperty Name="新影像碼" ColumnName="新影像碼" />
+                <ScalarProperty Name="客戶區域" ColumnName="客戶區域" />
+                <ScalarProperty Name="客戶等級" ColumnName="客戶等級" />
+                <ScalarProperty Name="合約等級" ColumnName="合約等級" />
+                <ScalarProperty Name="公會頭銜" ColumnName="公會頭銜" />
+                <ScalarProperty Name="收款方式" ColumnName="收款方式" />
+                <ScalarProperty Name="帳款聯絡人" ColumnName="帳款聯絡人" />
+                <ScalarProperty Name="VPN備註" ColumnName="VPN備註" />
+                <ScalarProperty Name="CPORT4" ColumnName="CPORT4" />
+                <ScalarProperty Name="CPORT3" ColumnName="CPORT3" />
+                <ScalarProperty Name="CPORT2" ColumnName="CPORT2" />
+                <ScalarProperty Name="CPORT1" ColumnName="CPORT1" />
+                <ScalarProperty Name="PORT" ColumnName="PORT" />
+                <ScalarProperty Name="遠端維護2" ColumnName="遠端維護2" />
+                <ScalarProperty Name="遠端維護" ColumnName="遠端維護" />
+                <ScalarProperty Name="申報時段" ColumnName="申報時段" />
+                <ScalarProperty Name="防毒到期日" ColumnName="防毒到期日" />
+                <ScalarProperty Name="登錄日期" ColumnName="登錄日期" />
+                <ScalarProperty Name="自安讀卡機" ColumnName="自安讀卡機" />
+                <ScalarProperty Name="光碟更版" ColumnName="光碟更版" />
+                <ScalarProperty Name="硬體到期日" ColumnName="硬體到期日" />
+                <ScalarProperty Name="VPN_IP" ColumnName="VPN_IP" />
+                <ScalarProperty Name="IC卡教學" ColumnName="IC卡教學" />
+                <ScalarProperty Name="讀卡機數量" ColumnName="讀卡機數量" />
+                <ScalarProperty Name="讀卡機" ColumnName="讀卡機" />
+                <ScalarProperty Name="統編抬頭" ColumnName="統編抬頭" />
+                <ScalarProperty Name="統編" ColumnName="統編" />
+                <ScalarProperty Name="傳真" ColumnName="傳真" />
+                <ScalarProperty Name="成交人員" ColumnName="成交人員" />
+                <ScalarProperty Name="安裝人員" ColumnName="安裝人員" />
+                <ScalarProperty Name="行動電話" ColumnName="行動電話" />
+                <ScalarProperty Name="影像碼" ColumnName="影像碼" />
+                <ScalarProperty Name="FOX版本" ColumnName="FOX版本" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="轉檔" ColumnName="轉檔" />
+                <ScalarProperty Name="介紹" ColumnName="介紹" />
+                <ScalarProperty Name="快速碼" ColumnName="快速碼" />
+                <ScalarProperty Name="申報方式" ColumnName="申報方式" />
+                <ScalarProperty Name="看診時段" ColumnName="看診時段" />
+                <ScalarProperty Name="舊版密碼" ColumnName="舊版密碼" />
+                <ScalarProperty Name="註冊密碼" ColumnName="註冊密碼" />
+                <ScalarProperty Name="更版密碼" ColumnName="更版密碼" />
+                <ScalarProperty Name="備註" ColumnName="備註" />
+                <ScalarProperty Name="等級" ColumnName="等級" />
+                <ScalarProperty Name="醫事代號" ColumnName="醫事代號" />
+                <ScalarProperty Name="聯絡人" ColumnName="聯絡人" />
+                <ScalarProperty Name="畢業學校" ColumnName="畢業學校" />
+                <ScalarProperty Name="郵遞區號" ColumnName="郵遞區號" />
+                <ScalarProperty Name="縣市" ColumnName="縣市" />
+                <ScalarProperty Name="寄合約" ColumnName="寄合約" />
+                <ScalarProperty Name="HCA2" ColumnName="HCA2" />
+                <ScalarProperty Name="HCA" ColumnName="HCA" />
+                <ScalarProperty Name="xml安裝台" ColumnName="xml安裝台" />
+                <ScalarProperty Name="xml已安裝" ColumnName="xml已安裝" />
+                <ScalarProperty Name="xml安裝" ColumnName="xml安裝" />
+                <ScalarProperty Name="合約種類" ColumnName="合約種類" />
+                <ScalarProperty Name="合約備註" ColumnName="合約備註" />
+                <ScalarProperty Name="合約金額" ColumnName="合約金額" />
+                <ScalarProperty Name="目前版次" ColumnName="目前版次" />
+                <ScalarProperty Name="更版日期" ColumnName="更版日期" />
+                <ScalarProperty Name="目前版本" ColumnName="目前版本" />
+                <ScalarProperty Name="計次版本" ColumnName="計次版本" />
+                <ScalarProperty Name="維護入帳日" ColumnName="維護入帳日" />
+                <ScalarProperty Name="維護到期日" ColumnName="維護到期日" />
+                <ScalarProperty Name="維護起始日" ColumnName="維護起始日" />
+                <ScalarProperty Name="維護方式" ColumnName="維護方式" />
+                <ScalarProperty Name="硬體購買日" ColumnName="硬體購買日" />
+                <ScalarProperty Name="付費站數" ColumnName="付費站數" />
+                <ScalarProperty Name="工作站數" ColumnName="工作站數" />
+                <ScalarProperty Name="購買金額" ColumnName="購買金額" />
+                <ScalarProperty Name="軟體購買日" ColumnName="軟體購買日" />
+                <ScalarProperty Name="客戶地址" ColumnName="客戶地址" />
+                <ScalarProperty Name="負責醫師" ColumnName="負責醫師" />
+                <ScalarProperty Name="附掛2" ColumnName="附掛2" />
+                <ScalarProperty Name="附掛1" ColumnName="附掛1" />
+                <ScalarProperty Name="分機2" ColumnName="分機2" />
+                <ScalarProperty Name="分機1" ColumnName="分機1" />
+                <ScalarProperty Name="客戶電話2" ColumnName="客戶電話2" />
+                <ScalarProperty Name="客戶電話" ColumnName="客戶電話" />
+                <ScalarProperty Name="區域業務" ColumnName="區域業務" />
+                <ScalarProperty Name="負責業務" ColumnName="負責業務" />
+                <ScalarProperty Name="客戶名稱" ColumnName="客戶名稱" />
+                <ScalarProperty Name="chkno" ColumnName="chkno" />
+                <ScalarProperty Name="客戶編號" ColumnName="客戶編號" />
+                <ScalarProperty Name="索引編號" ColumnName="索引編號" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

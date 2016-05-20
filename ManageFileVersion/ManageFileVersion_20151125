@@ -1,0 +1,6 @@
+[2015/11/25 上午 11:52]addBug error: 無法更新 EntitySet 'bug_notice'，因為它有 DefiningQuery，但是在 <ModificationFunctionMapping> 元素中沒有 <InsertFunction> 元素來支援目前的作業。
+[2015/11/25 下午 12:00]addBug error: 無法更新 EntitySet 'bug_notice'，因為它有 DefiningQuery，但是在 <ModificationFunctionMapping> 元素中沒有 <InsertFunction> 元素來支援目前的作業。
+[2015/11/25 下午 12:05]addBug error: 無法更新 EntitySet 'bug_notice'，因為它有 DefiningQuery，但是在 <ModificationFunctionMapping> 元素中沒有 <InsertFunction> 元素來支援目前的作業。
+[2015/11/25 下午 01:34]addBug error: 無法更新 EntitySet 'bug_notice'，因為它有 DefiningQuery，但是在 <ModificationFunctionMapping> 元素中沒有 <InsertFunction> 元素來支援目前的作業。
+[2015/11/25 下午 03:24]readBug error: 轉型為 'System.Int32' 型別失敗，因為具體化的值為 Null。此結果型別的泛型參數或此查詢，兩者中必須有一個使用可為 Null 的型別。
+[2015/11/25 下午 03:24]readBug error: 轉型為 'System.Int32' 型別失敗，因為具體化的值為 Null。此結果型別的泛型參數或此查詢，兩者中必須有一個使用可為 Null 的型別。

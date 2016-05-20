@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ManageFileVersion.Controllers.ApiTestController">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAABIAIAACAEACCEAAAACAAAACAAAAAg=</HashCode>
+      <FileName>Controllers\ApiTestController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageFileVersion.Controllers.HomeController">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AFoAAAAAEAAAgAQAAAAABBAAAAAAAAQAgAEQAAQEAAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageFileVersion.Controllers.TestController">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAEAACAAAAAAAAACAAAAAAAEAABEABCAAAAA=</HashCode>
+      <FileName>Controllers\TestController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageFileVersion.Models.entityTestData">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAARAFCUABQBAACACEABUIDAAAgAKAAA=</HashCode>
+      <FileName>Models\entryTestData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageFileVersion.Models.bug_notice">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAECAQARAAEAAAAAAABCAgJQAACAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Models\bug_notice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageFileVersion.Models.test_notice">
+    <Position X="7.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAgAAAAAAAAAAgAAAAACAAAAAAAEAAAQAACAAQAIA=</HashCode>
+      <FileName>Models\test_notice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManageFileVersion.Models.TCSEntities">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAgAAAAAAAAEAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Models\tcs.Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="微軟正黑體" Size="9" />
+</ClassDiagram>

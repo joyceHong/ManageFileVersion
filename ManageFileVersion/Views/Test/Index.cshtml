@@ -1,0 +1,272 @@
+﻿@section news{
+    <h1 class="page-header">最新測試公告</h1>    
+}
+
+
+<div ng-controller="listNewNote">    
+    <table class="table table-bordered">
+        <thead>
+            <tr class="info">                
+                <th>
+                    <a href="#" ng-click="sortType = 'ikey'; sortReverse = !sortReverse">#</a>
+                    <img src="~/Images/down.png" ng-show="sortType == 'ikey' && !sortReverse" />
+                    <img src="~/Images/up.png" ng-show="sortType == 'ikey' && sortReverse" />                
+                </th>
+                <th>
+                    <a href="#" ng-click="sortType = 'productType'; sortReverse = !sortReverse">產品類別</a>
+                    <img src="~/Images/down.png" ng-show="sortType == 'productType' && !sortReverse" />
+                    <img src="~/Images/up.png" ng-show="sortType == 'productType' && sortReverse" />  
+                </th>
+                <th>
+                    <a href="#" ng-click="sortType = 'fileName'; sortReverse = !sortReverse">檔案名稱</a>
+                    <img src="~/Images/down.png" ng-show="sortType == 'fileName' && !sortReverse" />
+                    <img src="~/Images/up.png" ng-show="sortType == 'fileName' && sortReverse" />                  
+                </th>
+                <th>
+                    <a href="#" ng-click="sortType = 'fileVersion'; sortReverse = !sortReverse">版本管理</a>
+                    <img src="~/Images/down.png" ng-show="sortType == 'fileVersion' && !sortReverse" />
+                    <img src="~/Images/up.png" ng-show="sortType == 'fileVersion' && sortReverse" />                  
+                </th>
+                <th>
+                    <a href="#" ng-click="sortType = 'updateTime'; sortReverse = !sortReverse">更新日期</a>
+                    <img src="~/Images/down.png" ng-show="sortType == 'updateTime' && !sortReverse" />
+                    <img src="~/Images/up.png" ng-show="sortType == 'updateTime' && sortReverse" />            
+                </th>
+                <th>
+                    <a href="#" ng-click="sortType = 'context'; sortReverse = !sortReverse">主旨</a>
+                    <img src="~/Images/down.png" ng-show="sortType == 'context' && !sortReverse" />
+                    <img src="~/Images/up.png" ng-show="sortType == 'context' && sortReverse" /></th>
+                <th>
+                    <a href="#" ng-click="sortType = 'downloadFile'; sortReverse = !sortReverse">下戴測試文件</a>
+                    <img src="~/Images/down.png" ng-show="sortType == 'downloadFile' && !sortReverse" />
+                    <img src="~/Images/up.png" ng-show="sortType == 'downloadFile' && sortReverse" />                
+                </th>
+                <th><a href="#" ng-click="sortType = 'testFilePath'; sortReverse = !sortReverse">測試檔案路徑</a>
+                    <img src="~/Images/down.png" ng-show="sortType == 'testFilePath' && !sortReverse" />
+                    <img src="~/Images/up.png" ng-show="sortType == 'testFilePath' && sortReverse" />
+                </th>
+                <th>回報BUG</th>
+                <th>列表BUG</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="announcement in listNewAnnouncement| orderBy:sortType:sortReverse ">
+                <td>{{::announcement.ikey}}</td>
+                <td>{{::announcement.productType}}</td>
+                <td>{{::announcement.fileName}}</td>
+                <td>{{::announcement.fileVersion}}</td>
+                <td>{{::announcement.updateTime| date:"yyyy/MM/dd ' ' h:mma"}}</td>
+                <td>{{::announcement.context}}</td>
+                <td><a href="~/documentFile/{{announcement.downloadFile}}" target="_blank">{{::announcement.downloadFile}}</a></td>
+                <td>{{::announcement.testFilePath}}</td>
+                <td><button type="button" class="btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#addBug" ng-click="showBugForm(announcement.ikey)"><span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span></button></td>
+                <td>
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#listBug" ng-click="showListbugs(announcement.ikey)"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span></button>                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="modal fade" id="addBug" tabindex="-1" role="dialog" aria-labelledby="addBug" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                    <h4 class="modal-title custom_align" id="Heading">測試回報BUG</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>檔名</label>
+                        <input type="hidden" ng-model="addBugAnnounceIkey" />
+                        <input class="form-control" ng-model="addBugFileName" type="text" placeholder="請輸入檔名" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>版本</label>
+                        <input class="form-control" ng-model="addBugFileVersion" type="text" placeholder="1.0.0.0" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>回報訊息</label>
+                        <textarea rows="10" class="form-control" ng-model="addBugContext" placeholder="請輸入內容"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>上傳檔案</label>
+                        <input type="file" id="addBugDocumentFile" />
+                    </div>
+                </div>
+                <div class="modal-footer ">
+                    <button type="button" class="btn btn-success" ng-click="addBugSubmit()"><span class="glyphicon glyphicon-ok-sign"></span> Yes</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="listBug" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">bug回報列表</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-search">查詢</i></div>
+                            <input type="text" class="form-control" placeholder="Search" ng-model="searchText">
+                            <input type="hidden" ng-model="hiddenAnnounceIkey" />
+                        </div>
+                    </div>
+                    <table class="table table-striped" width="600">
+                        <thead>
+                            <tr class="danger">
+                                <th>提報者</th>
+                                <th>檔案</th>
+                                <th>版本</th>
+                                <th>提報內容</th>
+                                <th>下戴檔案</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="bug in listBugs | filter:searchText">
+                                <td>{{::bug.userName}}</td>
+                                <td>{{::bug.fileName}}</td>
+                                <td>{{::bug.fileVersion}}</td>
+                                <td>
+                                    <label ng-if="!(bug.ikey === editIkey)">{{bug.bugContext}}</label>
+                                    <input type="hidden" id="hiddenBugContext_{{bug.ikey}}" value="{{bug.bugContext}}" />
+                                    <textarea style="width:300px" ng-if="(bug.ikey === editIkey)" ng-model="$parent.$parent.editBugContext">                                        
+                                    </textarea>
+                                </td>
+                                <td>
+                                    <div id="editImage" ng-if="!(bug.ikey === editIkey)"><a href="~/bugFile/{{bug.bugDocumentFile}}" target="_blank">{{bug.bugDocumentFile}}</a></div>
+                                    <div id="editImage" ng-if="(bug.ikey === editIkey)"><input type="file" id="editBugDocumentFile" /></div>
+                                </td>
+                                <td>
+                                    <div ng-show="(bug.uid == userID)">
+                                        <button ng-click="save(bug.ikey)" ng-show="(bug.ikey === editIkey)"><span class="glyphicon glyphicon-floppy-disk"></span></button>
+                                        <button ng-click="cancel(bug.ikey)" ng-show="(bug.ikey === editIkey)"><span class="glyphicon glyphicon-remove-circle"></span></button>
+                                        <button ng-click="edit(bug.ikey)" ng-show="!(bug.ikey === editIkey)"><span class="glyphicon glyphicon-pencil"></span></button>
+                                        <button ng-click="delete(bug.ikey)"><span class="glyphicon glyphicon-trash"></span></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <input type="hidden" value=@ViewBag.username id="userID" />
+</div>
+<script>
+    var app = angular.module("servFileModel", []);
+    app.controller("listNewNote", function ($scope, $http, pageFactory, $q) {
+
+        pageFactory.getData('../api/ApiTest').then(function (value) {
+            $scope.listNewAnnouncement = value;
+        });
+
+        $scope.showBugForm = function (announceIkey) {
+            pageFactory.getData('../api/ApiTest/readTestNote/' + announceIkey).then(function (value) {
+                $scope.addBugAnnounceIkey = value.ikey;
+                $scope.addBugFileVersion = value.fileVersion;
+                $scope.addBugFileName = value.fileName;
+                $scope.addBugContext = "";
+                $('#addBugDocumentFile').replaceWith($("#addBugDocumentFile").clone());
+            });
+        }
+
+        $scope.userID =  $("#userID").val();     
+        $scope.addBugSubmit = function () {
+            var formData = new FormData();          
+            formData.append("addBugUid", $scope.userID);            
+            formData.append("addBugAnnounceIkey", $scope.addBugAnnounceIkey);
+            formData.append("addBugContext", $scope.addBugContext);
+            formData.append("addBugDocumentFile", $('#addBugDocumentFile')[0].files[0]);
+            formData.append("addBugType", 0);
+
+            pageFactory.postData('../Test/AddBug' ,formData).then(function (value) {
+                $('#addBug').modal('hide');
+                alert("儲存成功");
+            })
+        }
+
+        $scope.showListbugs = function (announceIkey) {
+            $scope.hiddenAnnounceIkey = announceIkey;
+            $scope.listBugs = null;
+            pageFactory.getData('../api/ApiTest/listBugNote/' + announceIkey +"/bugType/0").then(function (value) {              
+                $scope.listBugs = value;
+            });
+        }
+        $scope.editIkey = 0;
+        $scope.edit = function (editIkey) {
+            $scope.editIkey = editIkey;
+            $scope.editBugContext= $("#hiddenBugContext_"+editIkey).val();//jQuery 語法
+        }
+        $scope.cancel = function () {
+            $scope.editIkey = 0;
+        }
+        $scope.save = function () {
+            var formData = new FormData();
+            formData.append("editIkey", $scope.editIkey);
+            formData.append("editBugContext", $scope.editBugContext);            
+            formData.append("editBugDocumentFile", $('#editBugDocumentFile')[0].files[0]);
+            formData.append("editBugType", 0); //測試類別0:測試版 1:正式版
+
+            pageFactory.postData('../Test/EditBug', formData).then(function (value) {
+
+                //顯出列表, $scope.hiddenAnnounceIkey 來自hidden
+                pageFactory.getData('../api/ApiTest/listBugNote/' + $scope.hiddenAnnounceIkey + "/bugType/0").then(function (value) {
+                    $scope.listBugs = value;
+                });
+
+                alert("儲存成功");
+                $scope.editIkey = 0;
+            })
+        }
+        $scope.delete = function myfunction(deleteIkey) {
+            var confirmResult = window.confirm("確定要刪除嗎?");
+           
+            if (confirmResult == true) {
+                var formData = new FormData();
+                formData.append("deleteIkey", deleteIkey);
+                pageFactory.postData('../Test/DeleteBug', formData).then(function (value) {
+
+                    //顯出列表, $scope.hiddenAnnounceIkey 來自hidden
+                    pageFactory.getData('../api/ApiTest/listBugNote/' + $scope.hiddenAnnounceIkey + "/bugType/0").then(function (value) {
+                        $scope.listBugs = value;
+                    });
+                    $scope.editIkey = 0;
+                })
+            }
+        }
+    })
+
+
+    // factory
+    app.factory('pageFactory', function ($http) {
+        //var userID = @ViewBag.username;
+        return {
+            getData: function (url) {
+                return ($http.get(url).then(function (res) {
+                    return res.data;
+                }));
+            },
+            postData:function(url, formData)
+            {
+                return($http.post(url,formData, {
+                    transformRequest: angular.identity,
+                    headers: {'Content-Type': undefined}
+                }).then(function (res) {
+                    return res.data;
+                }));
+            },
+        }
+    });
+</script>

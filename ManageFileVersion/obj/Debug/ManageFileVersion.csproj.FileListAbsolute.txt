@@ -1,0 +1,191 @@
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\ManageFileVersion.dll.config
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\ManageFileVersion.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\ManageFileVersion.pdb
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Antlr3.Runtime.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\EntityFramework.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\EntityFramework.SqlServer.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Newtonsoft.Json.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Owin.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\System.Net.Http.Formatting.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\System.Web.Helpers.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\System.Web.Http.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\System.Web.Http.WebHost.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\System.Web.Mvc.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\System.Web.Optimization.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\System.Web.Razor.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\System.Web.WebPages.Deployment.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\System.Web.WebPages.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\System.Web.WebPages.Razor.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\WebGrease.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\System.Web.Helpers.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\System.Web.Mvc.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\System.Web.Optimization.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\System.Web.Razor.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\System.Web.WebPages.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\System.Web.WebPages.Deployment.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\System.Web.WebPages.Razor.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Antlr3.Runtime.pdb
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Newtonsoft.Json.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\System.Net.Http.Formatting.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\System.Web.Http.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\System.Web.Http.WebHost.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\EntityFramework.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\EntityFramework.SqlServer.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\zh-Hant\System.Web.Helpers.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\zh-Hant\System.Web.Mvc.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\zh-Hant\System.Web.Optimization.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\zh-Hant\System.Web.Razor.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\zh-Hant\System.Web.WebPages.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\zh-Hant\System.Net.Http.Formatting.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\zh-Hant\System.Web.Http.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\zh-Hant\System.Web.Http.WebHost.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\zh-Hant\EntityFramework.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\zh-Hant\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\zh-Hant\Microsoft.AspNet.Identity.Owin.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\zh-Hant\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\zh-Hant\Microsoft.Owin.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\zh-Hant\Microsoft.Owin.Host.SystemWeb.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\zh-Hant\Microsoft.Owin.Security.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\zh-Hant\Microsoft.Owin.Security.Facebook.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\zh-Hant\Microsoft.Owin.Security.Google.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\zh-Hant\Microsoft.Owin.Security.Twitter.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\bin\zh-Hant\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\obj\Debug\ManageFileVersion.csprojResolveAssemblyReference.cache
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\obj\Debug\ManageFileVersion.dll
+C:\Users\RDCP01\Documents\Visual Studio 2013\Projects\ManageFileVersion\ManageFileVersion\obj\Debug\ManageFileVersion.pdb
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\ManageFileVersion.dll.config
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\ManageFileVersion.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\ManageFileVersion.pdb
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Antlr3.Runtime.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\EntityFramework.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\EntityFramework.SqlServer.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.AspNet.Identity.Core.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.Cookies.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.Facebook.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.Google.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.OAuth.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.Twitter.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.Web.Infrastructure.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Newtonsoft.Json.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Owin.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\System.Net.Http.Formatting.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\System.Web.Helpers.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\System.Web.Http.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\System.Web.Http.WebHost.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\System.Web.Mvc.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\System.Web.Optimization.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\System.Web.Razor.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\System.Web.WebPages.Deployment.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\System.Web.WebPages.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\System.Web.WebPages.Razor.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\WebGrease.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\System.Web.Helpers.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\System.Web.Mvc.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\System.Web.Optimization.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\System.Web.Razor.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\System.Web.WebPages.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\System.Web.WebPages.Deployment.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\System.Web.WebPages.Razor.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Antlr3.Runtime.pdb
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Newtonsoft.Json.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\System.Net.Http.Formatting.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\System.Web.Http.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\System.Web.Http.WebHost.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\EntityFramework.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\EntityFramework.SqlServer.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.AspNet.Identity.Core.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.Facebook.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.Cookies.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.OAuth.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.Google.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.Twitter.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\zh-Hant\System.Web.Helpers.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\zh-Hant\System.Web.Mvc.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\zh-Hant\System.Web.Optimization.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\zh-Hant\System.Web.Razor.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\zh-Hant\System.Web.WebPages.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\zh-Hant\System.Net.Http.Formatting.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\zh-Hant\System.Web.Http.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\zh-Hant\System.Web.Http.WebHost.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\zh-Hant\EntityFramework.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\zh-Hant\Microsoft.AspNet.Identity.Core.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\zh-Hant\Microsoft.AspNet.Identity.Owin.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\zh-Hant\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\zh-Hant\Microsoft.Owin.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\zh-Hant\Microsoft.Owin.Host.SystemWeb.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\zh-Hant\Microsoft.Owin.Security.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\zh-Hant\Microsoft.Owin.Security.Facebook.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\zh-Hant\Microsoft.Owin.Security.Google.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\zh-Hant\Microsoft.Owin.Security.Twitter.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\zh-Hant\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\obj\Debug\ManageFileVersion.csprojResolveAssemblyReference.cache
+D:\joyce\104\ManageFileVersion\ManageFileVersion\obj\Debug\ManageFileVersion.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\obj\Debug\ManageFileVersion.pdb
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\writeLog.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\writeLog.pdb
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Kendo.Mvc.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Kendo.Mvc.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\bg-BG\Kendo.Mvc.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\cs-CZ\Kendo.Mvc.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\da-DK\Kendo.Mvc.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\de-DE\Kendo.Mvc.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\es-ES\Kendo.Mvc.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\fr-FR\Kendo.Mvc.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\it-IT\Kendo.Mvc.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\nl-NL\Kendo.Mvc.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\pl-PL\Kendo.Mvc.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\pt-BR\Kendo.Mvc.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\pt-PT\Kendo.Mvc.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\ro-RO\Kendo.Mvc.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\ru-RU\Kendo.Mvc.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\sv-SE\Kendo.Mvc.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\tr-TR\Kendo.Mvc.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\uk-UA\Kendo.Mvc.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\zh-CN\Kendo.Mvc.resources.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\joyce\104\ManageFileVersion\ManageFileVersion\bin\Microsoft.AspNet.SignalR.SystemWeb.xml

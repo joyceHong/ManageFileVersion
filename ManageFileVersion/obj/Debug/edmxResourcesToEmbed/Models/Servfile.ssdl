@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="I_cpnewsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="bug_notice">
+    <Key>
+      <PropertyRef Name="ikey" />
+    </Key>
+    <Property Name="ikey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="announcement_ikey" Type="int" Nullable="false" />
+    <Property Name="uid" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="回報結果" Type="text" />
+    <Property Name="測試檔案" Type="varchar" MaxLength="100" />
+    <Property Name="測試類別" Type="int" Nullable="false" />
+    <Property Name="診所索引編號" Type="varchar" MaxLength="5" />
+    <Property Name="版本" Type="varchar" MaxLength="30" />
+    <Property Name="預計完成日" Type="date" />
+    <Property Name="退回" Type="int" />
+    <Property Name="需討論" Type="int" />
+    <Property Name="完成日" Type="date" />
+    <Property Name="建立日期" Type="date" />
+    <Property Name="修改時間" Type="datetime" />
+    <Property Name="最後狀態" Type="varchar" MaxLength="10" />
+    <Property Name="備註" Type="text" />
+    <Property Name="回報等級" Type="int" />
+  </EntityType>
+  <EntityType Name="bug_type">
+    <Key>
+      <PropertyRef Name="ikey" />
+    </Key>
+    <Property Name="ikey" Type="int" Nullable="false" />
+    <Property Name="type" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="context" Type="text" />
+    <Property Name="fileversion" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'i_cpnews.dbo.servfile' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+  <EntityType Name="servfile">
+    <Key>
+      <PropertyRef Name="Skey" />
+    </Key>
+    <Property Name="檔名" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="版本" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="大小" Type="int" Nullable="false" />
+    <Property Name="檔案路徑" Type="char" MaxLength="40" Nullable="false" />
+    <Property Name="副檔名" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="影像檔" Type="bit" Nullable="false" />
+    <Property Name="外掛檔" Type="bit" Nullable="false" />
+    <Property Name="原檔名" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="安裝位置" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="dn1" Type="bit" Nullable="false" />
+    <Property Name="crc" Type="int" Nullable="false" />
+    <Property Name="crc32" Type="nchar" MaxLength="8" Nullable="false" />
+    <Property Name="md5" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="lcrc" Type="int" Nullable="false" />
+    <Property Name="lcrc32" Type="nchar" MaxLength="8" Nullable="false" />
+    <Property Name="lmd5" Type="nchar" MaxLength="32" Nullable="false" />
+    <Property Name="specialchk" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="isnewonly" Type="int" Nullable="false" />
+    <Property Name="pdt" Type="varchar" MaxLength="3" />
+    <Property Name="Skey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="servfile_notice">
+    <Key>
+      <PropertyRef Name="Skey" />
+    </Key>
+    <Property Name="檔名" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="版本" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="更新日期" Type="datetime" />
+    <Property Name="類別" Type="char" MaxLength="30" />
+    <Property Name="顯示檔名" Type="char" MaxLength="30" />
+    <Property Name="存放路徑" Type="nchar" MaxLength="150" />
+    <Property Name="Skey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="test_notice">
+    <Key>
+      <PropertyRef Name="ikey" />
+    </Key>
+    <Property Name="ikey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="檔案名稱" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="版本" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="修改日期" Type="datetime" Nullable="false" />
+    <Property Name="主旨" Type="text" />
+    <Property Name="測試文件路徑" Type="nchar" MaxLength="400" />
+    <Property Name="測試檔案路徑" Type="nchar" MaxLength="400" />
+    <Property Name="產品類別" Type="char" MaxLength="20" />
+    <Property Name="釋出正式版" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="I_cpnewsModelStoreContainer">
+    <EntitySet Name="bug_notice" EntityType="Self.bug_notice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="bug_type" EntityType="Self.bug_type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="servfile_notice" EntityType="Self.servfile_notice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="test_notice" EntityType="Self.test_notice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="servfile" EntityType="Self.servfile" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [servfile].[檔名] AS [檔名], 
+    [servfile].[版本] AS [版本], 
+    [servfile].[大小] AS [大小], 
+    [servfile].[檔案路徑] AS [檔案路徑], 
+    [servfile].[副檔名] AS [副檔名], 
+    [servfile].[影像檔] AS [影像檔], 
+    [servfile].[外掛檔] AS [外掛檔], 
+    [servfile].[原檔名] AS [原檔名], 
+    [servfile].[安裝位置] AS [安裝位置], 
+    [servfile].[dn1] AS [dn1], 
+    [servfile].[crc] AS [crc], 
+    [servfile].[crc32] AS [crc32], 
+    [servfile].[md5] AS [md5], 
+    [servfile].[lcrc] AS [lcrc], 
+    [servfile].[lcrc32] AS [lcrc32], 
+    [servfile].[lmd5] AS [lmd5], 
+    [servfile].[specialchk] AS [specialchk], 
+    [servfile].[isnewonly] AS [isnewonly], 
+    [servfile].[pdt] AS [pdt], 
+    [servfile].[Skey] AS [Skey]
+    FROM [dbo].[servfile] AS [servfile]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

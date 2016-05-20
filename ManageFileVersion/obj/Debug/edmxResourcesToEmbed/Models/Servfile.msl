@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="I_cpnewsModelStoreContainer" CdmEntityContainer="I_cpnewsEntities">
+    <EntitySetMapping Name="servfile">
+      <EntityTypeMapping TypeName="I_cpnewsModel.servfile">
+        <MappingFragment StoreEntitySet="servfile">
+          <ScalarProperty Name="檔名" ColumnName="檔名" />
+          <ScalarProperty Name="版本" ColumnName="版本" />
+          <ScalarProperty Name="大小" ColumnName="大小" />
+          <ScalarProperty Name="檔案路徑" ColumnName="檔案路徑" />
+          <ScalarProperty Name="副檔名" ColumnName="副檔名" />
+          <ScalarProperty Name="影像檔" ColumnName="影像檔" />
+          <ScalarProperty Name="外掛檔" ColumnName="外掛檔" />
+          <ScalarProperty Name="原檔名" ColumnName="原檔名" />
+          <ScalarProperty Name="安裝位置" ColumnName="安裝位置" />
+          <ScalarProperty Name="dn1" ColumnName="dn1" />
+          <ScalarProperty Name="crc" ColumnName="crc" />
+          <ScalarProperty Name="crc32" ColumnName="crc32" />
+          <ScalarProperty Name="md5" ColumnName="md5" />
+          <ScalarProperty Name="lcrc" ColumnName="lcrc" />
+          <ScalarProperty Name="lcrc32" ColumnName="lcrc32" />
+          <ScalarProperty Name="lmd5" ColumnName="lmd5" />
+          <ScalarProperty Name="specialchk" ColumnName="specialchk" />
+          <ScalarProperty Name="isnewonly" ColumnName="isnewonly" />
+          <ScalarProperty Name="pdt" ColumnName="pdt" />
+          <ScalarProperty Name="Skey" ColumnName="Skey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="test_notice">
+      <EntityTypeMapping TypeName="I_cpnewsModel.test_notice">
+        <MappingFragment StoreEntitySet="test_notice">
+          <ScalarProperty Name="釋出正式版" ColumnName="釋出正式版" />
+          <ScalarProperty Name="產品類別" ColumnName="產品類別" />
+          <ScalarProperty Name="測試檔案路徑" ColumnName="測試檔案路徑" />
+          <ScalarProperty Name="測試文件路徑" ColumnName="測試文件路徑" />
+          <ScalarProperty Name="主旨" ColumnName="主旨" />
+          <ScalarProperty Name="修改日期" ColumnName="修改日期" />
+          <ScalarProperty Name="版本" ColumnName="版本" />
+          <ScalarProperty Name="檔案名稱" ColumnName="檔案名稱" />
+          <ScalarProperty Name="ikey" ColumnName="ikey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="servfile_notice">
+      <EntityTypeMapping TypeName="I_cpnewsModel.servfile_notice">
+        <MappingFragment StoreEntitySet="servfile_notice">
+          <ScalarProperty Name="Skey" ColumnName="Skey" />
+          <ScalarProperty Name="存放路徑" ColumnName="存放路徑" />
+          <ScalarProperty Name="顯示檔名" ColumnName="顯示檔名" />
+          <ScalarProperty Name="類別" ColumnName="類別" />
+          <ScalarProperty Name="更新日期" ColumnName="更新日期" />
+          <ScalarProperty Name="版本" ColumnName="版本" />
+          <ScalarProperty Name="檔名" ColumnName="檔名" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bug_type">
+      <EntityTypeMapping TypeName="I_cpnewsModel.bug_type">
+        <MappingFragment StoreEntitySet="bug_type">
+          <ScalarProperty Name="fileversion" ColumnName="fileversion" />
+          <ScalarProperty Name="context" ColumnName="context" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="ikey" ColumnName="ikey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bug_notice">
+      <EntityTypeMapping TypeName="I_cpnewsModel.bug_notice">
+        <MappingFragment StoreEntitySet="bug_notice">
+          <ScalarProperty Name="回報等級" ColumnName="回報等級" />
+          <ScalarProperty Name="備註" ColumnName="備註" />
+          <ScalarProperty Name="最後狀態" ColumnName="最後狀態" />
+          <ScalarProperty Name="修改時間" ColumnName="修改時間" />
+          <ScalarProperty Name="建立日期" ColumnName="建立日期" />
+          <ScalarProperty Name="完成日" ColumnName="完成日" />
+          <ScalarProperty Name="需討論" ColumnName="需討論" />
+          <ScalarProperty Name="退回" ColumnName="退回" />
+          <ScalarProperty Name="預計完成日" ColumnName="預計完成日" />
+          <ScalarProperty Name="版本" ColumnName="版本" />
+          <ScalarProperty Name="診所索引編號" ColumnName="診所索引編號" />
+          <ScalarProperty Name="測試類別" ColumnName="測試類別" />
+          <ScalarProperty Name="測試檔案" ColumnName="測試檔案" />
+          <ScalarProperty Name="回報結果" ColumnName="回報結果" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="announcement_ikey" ColumnName="announcement_ikey" />
+          <ScalarProperty Name="ikey" ColumnName="ikey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

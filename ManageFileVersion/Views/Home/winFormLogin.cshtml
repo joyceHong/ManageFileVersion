@@ -1,0 +1,50 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <style>
+        body {
+            font-size: xx-large;            
+            background-image: url('/Images/login_img.jpg');
+            background-repeat: no-repeat;
+        }
+
+        div {
+            border-color:blue;
+            margin: 4px 4px 4px 4px;
+            padding:4px 4px 4px 4px;
+            position:fixed;
+            top:300px;
+            left:100px;
+        }
+
+        input[type="text"]
+        {
+            font-size:24px;
+        }
+
+         input[type="password"]
+        {
+            font-size:24px;
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+    <form method="post">
+        <div>
+           帳號 &nbsp;&nbsp;&nbsp;&nbsp; <input type="text" name="username" /><br />
+           密碼 &nbsp;&nbsp;&nbsp;&nbsp; <input type="password" name="password" /><br /><br />
+            <input type="image" src="~/Images/LOGIN.jpg"
+                   width="120" height="30"
+                   border="0" alt="SUBMIT">             
+        </div>
+    </form>
+</body>
+</html>

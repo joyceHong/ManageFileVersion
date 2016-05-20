@@ -1,0 +1,379 @@
+﻿<script src="~/Scripts/factory/pageFactory.js"></script>
+<script src="~/Scripts/directive/showClinicMenu.js"></script>
+
+<h1 class="page-header">RD回報BUG時程</h1>   
+<style>
+    table {
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+</style>             
+<div ng-controller="listOfficialController">
+    <div>
+        <div class="row" style="border-radius:10px 10px 10px 10px; border:2px groove; margin:15px 15px 15px 15px;padding:15px 15px 15px 15px">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>診所名稱</label>
+                    <input type="text" class="form-control" ng-model="searchClinicName" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>產品類別</label><br />
+                    <select ng-options="m.FileName  for m in productTypes" ng-model="bugType" class="form-control">
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>關鍵字</label><br />
+                    <input type="text" class="form-control" ng-model="searchContext" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>狀態</label><br />
+                    <select ng-options="m for m in statusOptions" ng-model="status" class="form-control">
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>bug等級</label><br />
+                    <select ng-options="m.value for m in bugGrades" ng-model="grade" class="form-control">
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <input type="date" class="datepicker" id="startDate" />~<input type="date" class="datepicker" id="endDate" />
+                <button type="submit" class="btn btn-info" ng-click="search()">查詢</button>
+                <button type="button" class="btn btn-info" ng-click="print()">報表匯出</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+        <label>統計資料</label>
+        <table class="table">
+            <tr>
+                <th>產品名稱</th>
+                <th>bug等級</th>
+                <th>完成筆數</th>
+                <th>未完筆數</th>
+                <th>暫援筆數</th>
+            </tr>
+            <tr ng-repeat="statics in listAllStatics ">
+                <td>{{::statics.ProductName}}</td>
+                <td>{{::statics.BugGrade  }}</td>
+                <td>{{::statics.Complete}}</td>
+                <td>{{::statics.NotComplete}}</td>
+                <td>{{::statics.NotDeal}}</td>
+            </tr>
+           <tr ng-repeat-end>
+               <td>總計</td>
+               <td></td>
+               <td>{{totalComplete}}</td>
+               <td>{{totalNotComplete}}</td>
+               <td>{{totalNotDeal}}</td>
+           </tr>
+        </table>
+    </div>
+
+    <div>
+        <label>快速全文檢索</label>
+        <input type="text" class="form-control" placeholder="Search" ng-model="searchReleaseText"><p></p>
+
+        <table class="table">
+            <thead>
+                <tr class="success">
+                    <td>
+                        提報人
+                    </td>
+                    <td>
+                        產品
+                    </td>
+                    <td>
+                        版本
+                    </td>
+                    <td>
+                        診所名稱
+                    </td>   
+                    <td>
+                        建立日期
+                    </td>   
+                    <td>
+                        預估日期
+                    </td> 
+                    <td>
+                        完成日期
+                    </td>                                              
+                    <td>
+                        功能
+                    </td>
+                </tr>
+            </thead>
+            <tr ng-repeat="bug in listAllBugs|filter:searchReleaseText" class="active">
+                <td>
+                    {{::bug.userName}}
+                </td>
+                <td>
+                    {{::bug.fileName}}
+                </td>
+                <td>
+                    {{::bug.fileVersion}}
+
+                </td>
+                <td>
+                    {{::bug.clinicName}}
+                </td>               
+               
+                <td>
+                    {{::bug.createdTime }}
+                </td>
+
+                <td>
+                    {{::bug.estimatedDate }}
+                </td>                   
+                <td>
+                    {{::bug.completeDate }}
+                </td>
+               <td>
+                   <button type="button"  class="btn btn-warning btn-lg" data-toggle="modal" data-target="#editBug" ng-click="readBug(bug.ikey)"><span class="glyphicon glyphicon-pencil"></span></button>
+               </td>
+            </tr>
+        </table>                
+    </div>    
+
+    <div class="modal fade" id="editBug" tabindex="-1" role="dialog" aria-labelledby="editBug" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                    <h4 class="modal-title custom_align" id="Heading"> 設定回報BUG回覆內容 </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <input type="hidden" ng-model="hiddenIkey" />
+                            <label>產品:  
+                                <select class="form-control" ng-model="editType"  ng-options="m.FileName for m in editProductTypes"></select>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>版本:{{fileVersion}}</label>
+                        </div>
+                        <div class="form-group">
+                            <label>診所名稱:{{clinicName}}</label>
+                        </div>
+                        <div class="form-group">
+                            <label>回報等級</label>
+                            <select class="form-control" ng-model="editGrade" ng-options="o.value for o in bugGrades"></select>
+                        </div>
+                        <div class="form-group">
+                            <label>問題描述:</label>
+                            <div ng-bind-html="bugContext"></div>
+                        </div>
+                        <div class="form-group">                            
+                            圖片:
+                            <a href="~/bugFile/{{announcementIkey}}/{{currentYear}}/{{bugDocumentFile.split(',')[0] }}" target="_blank">{{bugDocumentFile.split(',')[0] }}</a>&nbsp;&nbsp;
+                            <a href="~/bugFile/{{announcementIkey}}/{{currentYear}}/{{bugDocumentFile.split(',')[1] }}" target="_blank">{{bugDocumentFile.split(',')[1] }}</a>&nbsp;&nbsp;
+                            <a href="~/bugFile/{{announcementIkey}}/{{currentYear}}/{{bugDocumentFile.split(',')[2] }}" target="_blank">{{bugDocumentFile.split(',')[2] }}</a>&nbsp;&nbsp;
+                            <a href="~/bugFile/{{announcementIkey}}/{{currentYear}}/{{bugDocumentFile.split(',')[3] }}" target="_blank">{{bugDocumentFile.split(',')[3] }}</a>&nbsp;&nbsp;
+                            <a href="~/bugFile/{{announcementIkey}}/{{currentYear}}/{{bugDocumentFile.split(',')[4] }}" target="_blank">{{bugDocumentFile.split(',')[4] }}</a>&nbsp;&nbsp;
+                        </div>
+                        <div class="form-group">
+                            <label>預估日期:</label>
+                            <input type="date" ng-model="estimate" id="estimate" />
+                        </div>
+                        <div class="form-group">
+                            <label>完成日期:</label>
+                            <input type="date" ng-model="complete" id="complete" />
+                        </div>
+                        <div class="form-group">
+                            <label>更改狀態</label>
+                            <select ng-options="m  for m in statusOptions" ng-model="bugFinalStatus" class="form-control"></select>
+                        </div>
+                        <div class="form-group">
+                            <label>備註:</label>
+                            <textarea id="editBugContext"  rows="10" cols="6" style="height:300px;width:560px"></textarea>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-success" ng-click="editBugSubmit()"><span class="glyphicon glyphicon-ok-sign"></span> 儲存</button>
+                    <button type="button" class="btn btn-info" ng-click="editCancel()"><span class="glyphicon glyphicon-remove-sign"></span> 取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="hidden" ng-model="txtListBugs" />
+</div>
+
+
+
+<script>
+    var app = pageFactory("servFileModel");
+    showClinicMenu(app);
+    app.controller("listOfficialController", function ($scope, $http,$filter, pageFactory) {
+        $scope.dynamic = {}; //用來放置每個no-model 的資料
+        var options = @Html.Raw(Json.Encode(@ViewBag.options));
+        $scope.statusOptions =options;
+        $scope.status = "未完成";
+        var d = new Date();
+        $scope.currentYear = d.getFullYear();
+        pageFactory.getData('../api/ApiTest/getProductTypes').then(function (value) {
+            $scope.productTypes = value;
+            $scope.editProductTypes = value;
+        })
+
+        $scope.bugGrades = @Html.Raw(Json.Encode(@ViewBag.bugGrades));
+        $scope.txtListBugs= @Html.Raw(Json.Encode(@ViewBag.listBugs.Data));
+        $scope.listAllBugs= $scope.txtListBugs;
+        $("#editBugContext").kendoEditor({
+            tools: [
+                "bold",
+                "italic",
+                "underline",
+                "strikethrough",
+                "justifyLeft",
+                "justifyCenter",
+                "justifyRight",
+                "justifyFull",
+                "createLink",
+                "unlink",
+                "createTable",
+                "addRowAbove",
+                "addRowBelow",
+                "addColumnLeft",
+                "addColumnRight",
+                "deleteRow",
+                "deleteColumn",
+                "viewHtml",
+                "formatting",
+                "cleanFormatting",
+                "fontSize",
+                "foreColor",
+            ],
+            encoded: true
+        });
+
+        //查詢
+        $scope.search = function () {
+            var startDate = $("#startDate").val();
+            var endDate = $("#endDate").val();
+            var formData = new FormData();
+            var butType = ($scope.bugType == undefined) ? '' : $scope.bugType.ikey;
+            var status = ($scope.status == undefined) ? '' : $scope.status;
+            var clinicName = ($scope.searchClinicName == undefined) ? '' : $scope.searchClinicName;
+            var context = ($scope.searchContext == undefined) ? '' : $scope.searchContext;
+            var grade = ($scope.grade == undefined) ? null : $scope.grade.key;
+
+            formData.append("userID", '');
+            formData.append("announceIkey", butType); //產品類別
+            formData.append("clinicName", clinicName); //診所名稱
+            formData.append("startDate", startDate);
+            formData.append("endDate", endDate);
+            formData.append("status", status);        //最後狀態
+            formData.append("context",context);       //關鍵字搜尋
+            formData.append("bugGrade",grade);       //關鍵字搜尋
+
+
+            if($scope.grade != null){
+                formData.append("bugGrade",$scope.grade.key); //建議事項  或 bug
+            }
+            pageFactory.postData('../Home/RDListBugs', formData).then(function (value) {
+                $scope.listAllBugs = value;
+            })
+
+            pageFactory.postData('../Home/statistics', formData).then(function (statistics) {
+
+                $scope.listAllStatics = statistics;
+                $scope.totalComplete=(statistics[0] ==null) ? 0 :  statistics[0].TotalComplete;
+                $scope.totalNotComplete=(statistics[0] ==null) ? 0 :statistics[0].TotalNotComplete;
+                $scope.totalNotDeal=(statistics[0] ==null) ? 0 :statistics[0].TotalNotDeal
+            })
+        }
+
+
+        //列印
+        $scope.print = function () {
+            var startDate = ($("#startDate").val() == undefined) ? '1910-01-01' : $("#startDate").val();
+            var endDate = ($("#endDate").val() == undefined) ? "2099-12-31" : $("#endDate").val();
+            var formData = new FormData();
+            var butType = ($scope.bugType == undefined) ? 'null' : $scope.bugType.ikey;
+            var status = ($scope.status == undefined) ? 'null' : $scope.status;
+            var clinicName = ($scope.searchClinicName == undefined) ? 'null' : $scope.searchClinicName;
+            window.open("../Home/Print/" + butType + "/" + clinicName + "/" + startDate + "/" + endDate + "/" + status, "_blank");
+        }
+
+        //修改
+        $scope.editBugSubmit = function () {
+            var formChangeData = new FormData();
+            formChangeData.append("editIkey",  $scope.hiddenIkey);
+            console.log( $scope.editType.ikey);
+
+            formChangeData.append("editType",  $scope.editType.ikey);
+            formChangeData.append("estimateDate", $("#estimate").val());
+            formChangeData.append("completeDate", $("#complete").val());
+            formChangeData.append("bugStatus",  $scope.bugFinalStatus);
+            formChangeData.append("remark",  $("#editBugContext").val());
+            formChangeData.append("editGrade",  $scope.editGrade.key);
+            pageFactory.postData('../Home/RDChangeBugStatus', formChangeData);
+            $scope.search();
+            alert("儲存完畢");
+            $('#editBug').modal('hide');
+        }
+
+
+        //讀取資料
+        $scope.readBug = function (editIkey) {
+
+            pageFactory.getData('../api/ApiTest/getProductTypes').then(function (value) {
+                $scope.editProductTypes = value;
+            })
+
+            pageFactory.getData('../api/ApiTest/readEditBug/' + editIkey).then(function (value) {
+                $scope.hiddenIkey = value.ikey;
+                $scope.fileName = value.fileName;
+
+                //讀取產品類別
+                angular.forEach($scope.editProductTypes, function (productType, key) {
+                    if (productType.ikey == value.announcementIkey) {
+                        $scope.editType = $scope.editProductTypes[key];
+                    }
+                });
+
+                //讀取等級
+                angular.forEach($scope.bugGrades,function(objData, key) {
+                    if (objData.key == value.grade) {
+                        $scope.editGrade = $scope.bugGrades[key];
+                    }
+                });
+                $scope.selectedProductIkey=value.announcementIkey;
+                $scope.fileVersion = value.fileVersion;
+                $scope.clinicName = value.clinicName;
+                $scope.bugContext = value.bugContext;
+                $scope.bugDocumentFile=value.bugDocumentFile;
+                $scope.announcementIkey = value.announcementIkey;
+                $("#estimate").val( value.estimatedDate);
+                $("#complete").val(value.completeDate);
+                $scope.bugFinalStatus = value.status;
+                var editBugContext = $("#editBugContext").data("kendoEditor");
+                editBugContext.value(value.remark);
+                var d = new Date();
+                $scope.currentYear = d.getFullYear();
+            });
+        }
+
+        //取消
+        $scope.editCancel = function () {
+            $('#editBug').modal('hide');
+        }
+    });
+
+</script>

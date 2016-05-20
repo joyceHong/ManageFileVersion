@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="I_cpnewsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="servfile">
+    <Key>
+      <PropertyRef Name="Skey" />
+    </Key>
+    <Property Name="檔名" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="版本" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="大小" Type="Int32" Nullable="false" />
+    <Property Name="檔案路徑" Type="String" MaxLength="40" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="副檔名" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="影像檔" Type="Boolean" Nullable="false" />
+    <Property Name="外掛檔" Type="Boolean" Nullable="false" />
+    <Property Name="原檔名" Type="String" MaxLength="30" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="安裝位置" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="dn1" Type="Boolean" Nullable="false" />
+    <Property Name="crc" Type="Int32" Nullable="false" />
+    <Property Name="crc32" Type="String" MaxLength="8" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="md5" Type="String" MaxLength="32" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="lcrc" Type="Int32" Nullable="false" />
+    <Property Name="lcrc32" Type="String" MaxLength="8" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="lmd5" Type="String" MaxLength="32" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="specialchk" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="isnewonly" Type="Int32" Nullable="false" />
+    <Property Name="pdt" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Skey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityContainer Name="I_cpnewsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="servfile" EntityType="Self.servfile" />
+    <EntitySet Name="test_notice" EntityType="I_cpnewsModel.test_notice" />
+    <EntitySet Name="servfile_notice" EntityType="I_cpnewsModel.servfile_notice" />
+    <EntitySet Name="bug_type" EntityType="I_cpnewsModel.bug_type" />
+    <EntitySet Name="bug_notice" EntityType="I_cpnewsModel.bug_notice" />
+  </EntityContainer>
+  <EntityType Name="test_notice">
+    <Key>
+      <PropertyRef Name="ikey" />
+    </Key>
+    <Property Name="ikey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="檔案名稱" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="版本" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="修改日期" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="主旨" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="測試文件路徑" Type="String" MaxLength="400" FixedLength="true" Unicode="true" />
+    <Property Name="測試檔案路徑" Type="String" MaxLength="400" FixedLength="true" Unicode="true" />
+    <Property Name="產品類別" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="釋出正式版" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="servfile_notice">
+    <Key>
+      <PropertyRef Name="Skey" />
+    </Key>
+    <Property Name="檔名" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="版本" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="更新日期" Type="DateTime" Precision="3" />
+    <Property Name="類別" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="顯示檔名" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="存放路徑" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+    <Property Name="Skey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="bug_type">
+    <Key>
+      <PropertyRef Name="ikey" />
+    </Key>
+    <Property Name="ikey" Type="Int32" Nullable="false" />
+    <Property Name="type" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="context" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="fileversion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="bug_notice">
+    <Key>
+      <PropertyRef Name="ikey" />
+    </Key>
+    <Property Name="ikey" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="announcement_ikey" Type="Int32" Nullable="false" />
+    <Property Name="uid" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="回報結果" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="測試檔案" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="測試類別" Type="Int32" Nullable="false" />
+    <Property Name="診所索引編號" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="版本" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="預計完成日" Type="DateTime" Precision="0" />
+    <Property Name="退回" Type="Int32" />
+    <Property Name="需討論" Type="Int32" />
+    <Property Name="完成日" Type="DateTime" Precision="0" />
+    <Property Name="建立日期" Type="DateTime" Precision="0" />
+    <Property Name="修改時間" Type="DateTime" Precision="3" />
+    <Property Name="最後狀態" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="備註" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="回報等級" Type="Int32" />
+  </EntityType>
+</Schema>
